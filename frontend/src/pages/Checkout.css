@@ -1,0 +1,129 @@
+.checkout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.checkout__title {
+    text-align: center;
+    margin-bottom: 48px;
+    color: #333;
+}
+
+.checkout__container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+}
+
+.checkout__form {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout__section {
+    margin-bottom: 32px;
+}
+
+.checkout__section-title {
+    margin: 0 0 24px;
+    font-size: 18px;
+    color: #333;
+}
+
+.checkout__payment-methods {
+    display: flex;
+    gap: 24px;
+}
+
+.checkout__payment-method {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkout__payment-method input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4caf50;
+}
+
+.checkout__error {
+    color: #ff4d4f;
+    margin-bottom: 24px;
+    padding: 12px;
+    background: rgba(255, 77, 79, 0.1);
+    border-radius: 4px;
+}
+
+.checkout__summary {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+}
+
+.checkout__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.checkout__total-price {
+    color: #4caf50;
+    font-size: 24px;
+}
+
+.checkout__submit-button {
+    width: 100%;
+}
+
+.checkout__order-summary {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.checkout__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checkout__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout__item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.checkout__item-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.checkout__item-quantity {
+    font-size: 14px;
+    color: #666;
+}
+
+.checkout__item-price {
+    font-weight: 500;
+    color: #4caf50;
+}

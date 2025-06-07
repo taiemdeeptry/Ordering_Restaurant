@@ -1,0 +1,118 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Variants */
+.button--primary {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: #4338ca;
+}
+
+.button--secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.button--secondary:hover {
+    background-color: #4b5563;
+}
+
+.button--outline {
+    background-color: transparent;
+    border: 1px solid #4f46e5;
+    color: #4f46e5;
+}
+
+.button--outline:hover {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.button--text {
+    background-color: transparent;
+    color: #4f46e5;
+    padding: 0;
+}
+
+.button--text:hover {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+/* Sizes */
+.button--small {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.button--medium {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.button--large {
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+}
+
+/* States */
+.button--full-width {
+    width: 100%;
+}
+
+.button--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button--loading {
+    cursor: wait;
+}
+
+/* Loader */
+.button__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.button__loader-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: currentColor;
+    border-radius: 50%;
+    animation: button-loader 1.4s infinite ease-in-out both;
+}
+
+.button__loader-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.button__loader-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes button-loader {
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}

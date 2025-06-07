@@ -1,0 +1,102 @@
+.auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 32px;
+}
+
+.auth__container {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth__title {
+    text-align: center;
+    margin: 0 0 16px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.auth__subtitle {
+    text-align: center;
+    margin: 0 0 32px;
+    color: #666;
+    font-size: 16px;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.auth__error {
+    color: #ff4d4f;
+    background: rgba(255, 77, 79, 0.1);
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth__forgot-password {
+    text-align: right;
+    margin-top: -16px;
+}
+
+.auth__forgot-password a {
+    color: #4caf50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth__forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.auth__submit-button {
+    margin-top: 16px;
+}
+
+.auth__footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+.auth__footer p {
+    margin: 0 0 8px;
+}
+
+.auth__link {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .auth__container {
+        padding: 24px;
+    }
+
+    .auth__title {
+        font-size: 24px;
+    }
+
+    .auth__subtitle {
+        font-size: 14px;
+    }
+}

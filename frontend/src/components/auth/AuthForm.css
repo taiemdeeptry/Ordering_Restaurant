@@ -1,0 +1,118 @@
+.auth-form {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+}
+
+.auth-form__container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form__header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-form__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.auth-form__subtitle {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.auth-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-form__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.auth-form__input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-form__input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.auth-form__error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.auth-form__forgot-password {
+    text-align: right;
+}
+
+.auth-form__link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.auth-form__link:hover {
+    color: #4338ca;
+}
+
+.auth-form__submit {
+    margin-top: 1rem;
+}
+
+.auth-form__footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-form__text {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 1rem;
+    }
+
+    .auth-form__container {
+        padding: 1.5rem;
+    }
+
+    .auth-form__title {
+        font-size: 1.75rem;
+    }
+}

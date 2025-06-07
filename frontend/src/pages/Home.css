@@ -1,0 +1,311 @@
+.home {
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.home__hero {
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.home__hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 20, 15, 0.8), rgba(75, 56, 50, 0.7));
+    z-index: 1;
+}
+
+.home__hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+.home__hero-title {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home__hero-subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home__hero-description {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home__hero-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home__hero-button:hover {
+    background-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Features Section */
+.home__features {
+    padding: 5rem 0;
+    background-color: var(--background-color);
+}
+
+.home__features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.home__features-title {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.home__features-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.home__features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.home__feature-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home__feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.home__feature-icon-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background-color: rgba(190, 155, 123, 0.15);
+}
+
+.home__feature-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.home__feature-content {
+    flex: 1;
+}
+
+.home__feature-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: var(--primary-color);
+}
+
+.home__feature-description {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Testimonial Section */
+.home__testimonial {
+    padding: 6rem 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.home__testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.home__testimonial-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.home__testimonial-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.home__testimonial-content {
+    position: relative;
+    padding: 2rem;
+}
+
+.home__testimonial-content::before {
+    content: "\201C"; /* Unicode cho dấu ngoặc kép mở */
+    font-family: var(--font-heading);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+}
+
+.home__testimonial-quote {
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.home__testimonial-author {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .home__hero-title {
+        font-size: 3.5rem;
+    }
+
+    .home__hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home__hero {
+        height: 75vh;
+    }
+
+    .home__hero-title {
+        font-size: 2.8rem;
+    }
+
+    .home__hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .home__hero-description {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+
+    .home__features-title,
+    .home__testimonial-title {
+        font-size: 2.2rem;
+    }
+
+    .home__testimonial-quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home__hero {
+        height: 65vh;
+    }
+
+    .home__hero-title {
+        font-size: 2.2rem;
+    }
+
+    .home__hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .home__hero-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .home__features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home__feature-title {
+        font-size: 1.5rem;
+    }
+}

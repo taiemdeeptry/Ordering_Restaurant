@@ -1,0 +1,132 @@
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.cart__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.cart__header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.cart__items {
+    margin-bottom: 32px;
+}
+
+.cart__item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart__item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cart__item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart__item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart__item-name {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.cart__item-price {
+    margin: 0;
+    display: flex;
+    gap: 8px;
+    color: #666;
+}
+
+.cart__item-price--original {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.cart__item-price--discounted {
+    color: #ff4d4f;
+    font-weight: 500;
+}
+
+.cart__item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart__item-quantity-value {
+    min-width: 24px;
+    text-align: center;
+}
+
+.cart__summary {
+    background: #f9f9f9;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.cart__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cart__total-price {
+    color: #4caf50;
+    font-size: 24px;
+}
+
+.cart__checkout-button {
+    width: 100%;
+}
+
+.cart__auth-required,
+.cart__empty {
+    text-align: center;
+    padding: 64px;
+}
+
+.cart__auth-required h2,
+.cart__empty h2 {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.cart__auth-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.cart__empty p {
+    color: #666;
+    margin-bottom: 24px;
+}

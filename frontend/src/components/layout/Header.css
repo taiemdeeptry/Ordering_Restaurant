@@ -1,0 +1,110 @@
+.header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: 24px;
+}
+
+.header__nav-item {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 0;
+}
+
+.header__nav-item:hover {
+    color: #4caf50;
+}
+
+.header__cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -16px;
+    background: #ff4d4f;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__user-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.header__auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.header__login-btn,
+.header__register-btn,
+.header__logout-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__login-btn {
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.header__login-btn:hover {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.header__register-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.header__register-btn:hover {
+    background: #45a049;
+}
+
+.header__logout-btn {
+    background: none;
+    border: 1px solid #ff4d4f;
+    color: #ff4d4f;
+}
+
+.header__logout-btn:hover {
+    background: rgba(255, 77, 79, 0.1);
+}
