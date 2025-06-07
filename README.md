@@ -2,12 +2,13 @@
 
 Hệ thống đặt món nhà hàng với các tính năng:
 
--   Đăng ký/Đăng nhập
 -   Xem danh sách món ăn
 -   Thêm món vào giỏ hàng
--   Thanh toán
+-   Chỉnh sửa món ăn trong giỏ hàng
+-   Chọn bàn
 -   Quản lý đơn hàng
--   Cập nhật real-time
+-   Thêm, chỉnh sửa, xóa, ẩn các món ăn, danh mục món ăn
+-   Quản lý các hóa đơn
 
 ## Yêu cầu hệ thống
 
@@ -26,15 +27,7 @@ cd backend
 npm install
 ```
 
-2. Tạo file .env trong thư mục backend:
-
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/restaurant
-JWT_SECRET=your_jwt_secret
-```
-
-3. Chạy server:
+2. Chạy server:
 
 ```bash
 npm run dev
@@ -49,13 +42,22 @@ cd frontend
 npm install
 ```
 
-2. Tạo file .env trong thư mục frontend:
+2. Chạy ứng dụng:
 
-```env
-REACT_APP_API_URL=http://localhost:5000/api
+```bash
+npm start
 ```
 
-3. Chạy ứng dụng:
+### Admin
+
+1. Cài đặt dependencies:
+
+```bash
+cd admin
+npm install
+```
+
+2. Chạy ứng dụng:
 
 ```bash
 npm start
@@ -91,32 +93,63 @@ restaurant-ordering-system/
 
 ### Authentication
 
--   POST /api/auth/register - Đăng ký
+-   POST /api/auth/register - Đăng ký tài khoản
 -   POST /api/auth/login - Đăng nhập
+-   POST /api/auth/refreshtoken - Gia hạn access token
+-   POST /api/auth/logout - Đăng xuất
 -   GET /api/auth/me - Lấy thông tin user hiện tại
 
 ### Categories
 
 -   GET /api/categories - Lấy danh sách danh mục
 -   GET /api/categories/:id - Lấy thông tin danh mục
+-   POST /api/categories - Tạo danh mục mới (Admin)
+-   PUT /api/categories/:id - Cập nhật danh mục (Admin)
+-   DELETE /api/categories/:id - Xóa danh mục (Admin)
 
 ### Menu Items
 
 -   GET /api/menu-items - Lấy danh sách món ăn
 -   GET /api/menu-items/:id - Lấy thông tin món ăn
+-   POST /api/menu-items - Thêm món ăn mới (Admin)
+-   PUT /api/menu-items/:id - Cập nhật món ăn (Admin)
+-   DELETE /api/menu-items/:id - Xóa món ăn (Admin)
 
 ### Orders
 
--   POST /api/orders - Tạo đơn hàng
+-   POST /api/orders - Tạo đơn hàng mới
 -   GET /api/orders - Lấy danh sách đơn hàng
 -   GET /api/orders/:id - Lấy thông tin đơn hàng
--   PUT /api/orders/:id - Cập nhật đơn hàng
+-   PUT /api/orders/:id - Cập nhật trạng thái đơn hàng
 -   DELETE /api/orders/:id - Hủy đơn hàng
 
 ### Tables
 
 -   GET /api/tables - Lấy danh sách bàn
 -   GET /api/tables/:id - Lấy thông tin bàn
+-   POST /api/tables - Thêm bàn mới (Admin)
+-   PUT /api/tables/:id - Cập nhật thông tin bàn (Admin)
+-   DELETE /api/tables/:id - Xóa bàn (Admin)
+
+### Users
+
+-   GET /api/users - Lấy danh sách người dùng (Admin)
+-   GET /api/users/:id - Lấy thông tin người dùng
+-   PUT /api/users/:id - Cập nhật thông tin người dùng
+-   DELETE /api/users/:id - Xóa người dùng (Admin)
+
+### Statistics
+
+-   GET /api/statistics/revenue - Thống kê doanh thu (Admin)
+-   GET /api/statistics/orders - Thống kê đơn hàng (Admin)
+-   GET /api/statistics/menu-items - Thống kê món ăn (Admin)
+
+Lưu ý:
+
+-   Các endpoint có đánh dấu (Admin) yêu cầu quyền admin
+-   Tất cả các endpoint (trừ /api/auth/register và /api/auth/login) đều yêu cầu xác thực JWT
+-   Access token được gửi trong header: `Authorization: Bearer <token>`
+-   Refresh token được lưu trong HTTP-only cookie
 
 ## Tính năng
 
@@ -157,15 +190,3 @@ restaurant-ordering-system/
 -   Socket.io
 -   JWT
 -   Bcrypt
-
-## Đóng góp
-
-1. Fork repository
-2. Tạo branch mới (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add some amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Tạo Pull Request
-
-## Giấy phép
-
-MIT
